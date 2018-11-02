@@ -16,5 +16,5 @@ mkdir agent
 cd agent
 wget https://vstsagentpackage.azureedge.net/agent/2.141.1/vsts-agent-linux-x64-2.141.1.tar.gz
 tar zxvf ./vsts-agent-linux-x64-2.141.1.tar.gz
-./config.sh --unattended --url $URL --auth pat --token $0 --pool $2 --agent $3 --acceptTeeEula --runAsService
+./config.sh --unattended --url $2 --auth pat --token $0 --pool $2 --agent $3 --acceptTeeEula --runAsService
 ./run.sh
