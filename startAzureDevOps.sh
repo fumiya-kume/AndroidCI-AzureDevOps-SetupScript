@@ -13,7 +13,7 @@ sudo dpkg -i packages-microsoft-prod.deb
 sudo apt-get install apt-transport-https
 sudo apt-get update
 sudo apt-get install dotnet-sdk-2.1 -y
-sudo ./bin/installdependencies.sh 
+sudo ~/agent/bin/installdependencies.sh 
 
 cd ~
 rm -rf agent
