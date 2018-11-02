@@ -1,5 +1,5 @@
  if[ $# -ne 3]; then
- 	echo "FileName $TOKEN $ORGANIZATION $POOL_NAME $AGENT_NAME"
+ echo "maybe missing arguments"
  fi
  
 $TOKEN=$1
