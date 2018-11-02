@@ -5,3 +5,8 @@
 - Ubuntu 環境にて Android の ビルド環境を整えるスクリプト
 - Azure DevOps への Self-Hosted-Agent の環境を整えるスクリプト
 
+# how to use
+
+```sh
+
+```
