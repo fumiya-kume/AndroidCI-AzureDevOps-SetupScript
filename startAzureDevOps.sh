@@ -22,4 +22,3 @@ cd agent
 wget https://vstsagentpackage.azureedge.net/agent/2.141.1/vsts-agent-linux-x64-2.141.1.tar.gz
 tar zxvf ./vsts-agent-linux-x64-2.141.1.tar.gz
 ./config.sh --unattended --url https://$2.visualstudio.com --auth pat --token $1 --pool $3 --agent $4 --acceptTeeEula --runAsService -y
-./run.sh
