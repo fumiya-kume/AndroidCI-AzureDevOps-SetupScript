@@ -3,7 +3,7 @@
  echo $3
  echo $4
  
- $URL=https://$1.visualstudio.com
+ $URL=https://$2.visualstudio.com
  echo $URL
  
 #$TOKEN=$1
