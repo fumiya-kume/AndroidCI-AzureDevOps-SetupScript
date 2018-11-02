@@ -1,17 +1,17 @@
 echo $1
-echo $2
-echo $3
-echo $4
+ echo $2
+ echo $3
+ echo $4
  
-$TOKEN=$1
-$ORGANIZATION=$2
-$POOL_NAME=$3
-$AGENT_NAME=$4
+#$TOKEN=$1
+#$ORGANIZATION=$2
+#$POOL_NAME=$3
+#$AGENT_NAME=$4
 cd ~
 rm -rf agent
 mkdir agent
 cd agent
 wget https://vstsagentpackage.azureedge.net/agent/2.141.1/vsts-agent-linux-x64-2.141.1.tar.gz
 tar zxvf ./vsts-agent-linux-x64-2.141.1.tar.gz
-./config.sh --unattended --url https://$ORGANIZATION.visualstudio.com --auth pat --token $TOKEN --pool $POOL_NAME --agent $AGENT_NAME --acceptTeeEula --runAsService
+./config.sh --unattended --url https://$1.visualstudio.com --auth pat --token $0 --pool $2 --agent $3 --acceptTeeEula --runAsService
 ./run.sh
