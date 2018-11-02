@@ -1,7 +1,3 @@
- if[ $# -ne 3]; then
- echo "maybe missing arguments"
- fi
- 
 $TOKEN=$1
 $ORGANIZATION=$2
 $POOL_NAME=$3
