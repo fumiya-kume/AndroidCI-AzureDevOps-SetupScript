@@ -10,10 +10,11 @@ echo "ANDROID_SDK_ROOT=${ANDROID_SDK_ROOT}" | sudo tee -a /etc/environment
 echo "ANDROID_HOME=${ANDROID_HOME}" | sudo tee -a /etc/environment
 echo "JAVA_HOME=/usr/bin/java" | sudo tee -a /etc/environment
 
-export ANDROID_HOME=${ANDROID_HOME}
+export ANDROID_HOME=/usr/local/lib/android/tools
+
 
 # install Android SDK
-sudo wget  --output-document=android-sdk.zip https://dl.google.com/android/repository/sdk-tools-linux-$SDK_VERSION.zip
+sudo wget  --output-document=android-sdk.zip https://dl.google.com/android/repository/sdk-tools-linux-${SDK_VERSION}.zip
 sudo apt-get install unzip -y
 sudo unzip android-sdk.zip -d ${ANDROID_ROOT}
 rm -f android-sdk.zip
@@ -22,4 +23,4 @@ echo y | ${ANDROID_ROOT}/tools/bin/sdkmanager "platforms;android-$SDK_BUILD_VERS
 echo y | ${ANDROID_ROOT}/tools/bin/sdkmanager "platform-tools" >/dev/null
 echo y | ${ANDROID_ROOT}/tools/bin/sdkmanager "build-tools;$SDK_BUILD_TOOLS_VERSION" >/dev/null
 # Android SDK のライセンスに同意する
-yes | android-sdk-linux/tools/bin/sdkmanager --licenses
+yes | ${ANDROID_HOME}/bin/sdkmanager --licenses
