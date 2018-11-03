@@ -10,8 +10,7 @@ echo "ANDROID_SDK_ROOT=${ANDROID_SDK_ROOT}" | sudo tee -a /etc/environment
 echo "ANDROID_HOME=${ANDROID_HOME}" | sudo tee -a /etc/environment
 echo "JAVA_HOME=/usr/bin/java" | sudo tee -a /etc/environment
 
-# export ANDROID_HOME=$ANDROID_HOME
-export ANDROID_HOME=/usr/local/lib/android/sdk
+export ANDROID_HOME=$ANDROID_HOME
 
 # install Android SDK
 sudo wget  --output-document=android-sdk.zip https://dl.google.com/android/repository/sdk-tools-linux-$SDK_VERSION.zip
