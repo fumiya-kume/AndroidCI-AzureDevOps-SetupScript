@@ -9,6 +9,7 @@ sudo apt-get --quiet update -y
 sudo apt-get --quiet install -y wget tar unzip lib32stdc++6 lib32z1
 
 ANDROID_ROOT=/usr/local/lib/android
+ANDROID_HOME=/usr/local/lib/android/sdk
 ANDROID_SDK_ROOT=${ANDROID_ROOT}/sdk
 echo "ANDROID_SDK_ROOT=${ANDROID_SDK_ROOT}" | tee -a /etc/environment
 
