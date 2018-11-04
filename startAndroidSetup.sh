@@ -13,9 +13,8 @@ sudo apt-get install unzip -y
 sudo wget  --output-document=android-sdk.zip https://dl.google.com/android/repository/sdk-tools-linux-${SDK_VERSION}.zip
 sudo unzip android-sdk.zip -d ${ANDROID_HOME}
 rm -f android-sdk.zip
-
-echo y | ${ANDROID_HOME}/tools/bin/sdkmanager "platforms;android-$SDK_BUILD_VERSION" >/dev/null
-echo y | ${ANDROID_HOME}/tools/bin/sdkmanager "platform-tools" >/dev/null
-echo y | ${ANDROID_HOME}/tools/bin/sdkmanager "build-tools;$SDK_BUILD_TOOLS_VERSION" >/dev/null
+echo y | sudo ${ANDROID_HOME}/tools/bin/sdkmanager "platforms;android-$SDK_BUILD_VERSION" >/dev/null
+echo y | sudo ${ANDROID_HOME}/tools/bin/sdkmanager "platform-tools" >/dev/null
+echo y | sudo ${ANDROID_HOME}/tools/bin/sdkmanager "build-tools;$SDK_BUILD_TOOLS_VERSION" >/dev/null
 # Android SDK のライセンスに同意する
 yes | ${ANDROID_HOME}/bin/sdkmanager --licenses
