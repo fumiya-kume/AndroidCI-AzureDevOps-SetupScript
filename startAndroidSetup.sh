@@ -13,7 +13,7 @@ sudo wget  --output-document=android-sdk.zip https://dl.google.com/android/repos
 sudo unzip android-sdk.zip -d ${ANDROID_HOME} 
 rm -f android-sdk.zip
 
-touch /root/.android/repositories.cfg 
+sudo touch /root/.android/repositories.cfg 
 echo y | sudo ${ANDROID_HOME}/tools/bin/sdkmanager "platforms;android-$SDK_BUILD_VERSION" >/dev/null
 echo y | sudo ${ANDROID_HOME}/tools/bin/sdkmanager "platform-tools" >/dev/null
 echo y | sudo ${ANDROID_HOME}/tools/bin/sdkmanager "build-tools;$SDK_BUILD_TOOLS_VERSION" >/dev/null
