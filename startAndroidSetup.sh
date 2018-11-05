@@ -17,4 +17,4 @@ echo y | sudo ${ANDROID_HOME}/tools/bin/sdkmanager "platforms;android-$SDK_BUILD
 echo y | sudo ${ANDROID_HOME}/tools/bin/sdkmanager "platform-tools" >/dev/null
 echo y | sudo ${ANDROID_HOME}/tools/bin/sdkmanager "build-tools;$SDK_BUILD_TOOLS_VERSION" >/dev/null
 # Android SDK のライセンスに同意する
-yes | ${ANDROID_HOME}/bin/sdkmanager --licenses
+yes | ${ANDROID_HOME}/tools/bin/sdkmanager --licenses
