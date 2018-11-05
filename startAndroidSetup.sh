@@ -4,8 +4,8 @@ SDK_BUILD_TOOLS_VERSION=28.0.2
 
 sudo apt install openjdk-8-jdk -y
 
-export ANDROID_HOME=/usr/local/lib/android
-export JAVA_HOME=/usr/lib/jvm/java-1.8.0-openjdk-amd64/
+export ANDROID_HOME='/usr/local/lib/android'
+export JAVA_HOME='/usr/lib/jvm/java-1.8.0-openjdk-amd64/'
 
 # install Android SDK
 sudo apt-get install unzip -y
