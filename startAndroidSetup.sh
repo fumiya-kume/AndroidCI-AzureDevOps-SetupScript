@@ -11,8 +11,9 @@ export PATH=/usr/local/lib/android/tools:/usr/local/lib/android/tools/bin:$PATH
 
 # install Android SDK
 sudo apt-get install unzip -y
+cd $ANDROID_HOME
 sudo wget  --output-document=android-sdk.zip https://dl.google.com/android/repository/sdk-tools-linux-${SDK_VERSION}.zip
-sudo unzip android-sdk.zip -d ${ANDROID_HOME} -A
+sudo unzip android-sdk.zip 
 rm -f android-sdk.zip
 
 sudo touch /home/kuxumarin/.android/repositories.cfg
