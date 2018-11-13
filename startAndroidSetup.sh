@@ -1,27 +1,23 @@
-SDK_VERSION=4333796
-SDK_BUILD_VERSION=28
-SDK_BUILD_TOOLS_VERSION=28.0.3
+sudo apt-get update
 
+# Install Java
 sudo apt install openjdk-8-jdk -y
-
-export ANDROID_HOME='/usr/local/lib/android'
 export JAVA_HOME='/usr/lib/jvm/java-1.8.0-openjdk-amd64/'
 
-export PATH=/usr/local/lib/android/tools:/usr/local/lib/android/tools/bin:$PATH
-
-# install Android SDK
+# Install unzip command
 sudo apt-get install unzip -y
-cd $ANDROID_HOME
-pwd
-sudo wget  --output-document=android-sdk.zip https://dl.google.com/android/repository/sdk-tools-linux-${SDK_VERSION}.zip
+
+# Install Android SDK
+sudo mkdir /usr/local/lib/android
+cd /usr/local/lib/android
+sudo wget  --output-document=android-sdk.zip https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
 sudo unzip android-sdk.zip 
-sudo rm -f android-sdk.zip
+rm -rf android-sdk.zip 
+cd tools/bin/
 
-sudo touch /home/kuxumarin/.android/repositories.cfg
 sudo touch /root/.android/repositories.cfg
-echo y | sudo ${ANDROID_HOME}/tools/bin/sdkmanager "platforms;android-$SDK_BUILD_VERSION" >/dev/null
-echo y | sudo ${ANDROID_HOME}/tools/bin/sdkmanager "platform-tools" >/dev/null
-echo y | sudo ${ANDROID_HOME}/tools/bin/sdkmanager "build-tools;$SDK_BUILD_TOOLS_VERSION" >/dev/null
+echo y | sudo ./sdkmanager "platforms;android-28" >/dev/null
+echo y | sudo ./sdkmanager "platform-tools" >/dev/null
+echo y | sudo ./sdkmanager "build-tools;28.0.3" >/dev/null
 
-# Android SDK のライセンスに同意する
-yes | sudo ${ANDROID_HOME}/tools/bin/sdkmanager --licenses
+yes | sudo ./sdkmanager --licenses
