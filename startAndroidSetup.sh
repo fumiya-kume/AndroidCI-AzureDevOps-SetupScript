@@ -16,6 +16,7 @@ sudo unzip android-sdk.zip
 rm -rf android-sdk.zip 
 cd tools/bin/
 
+sudo mkdir /root/.android
 sudo touch /root/.android/repositories.cfg
 echo y | sudo ./sdkmanager "platforms;android-28" >/dev/null
 echo y | sudo ./sdkmanager "platform-tools" >/dev/null
