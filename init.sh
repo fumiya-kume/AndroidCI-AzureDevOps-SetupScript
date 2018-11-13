@@ -1,4 +1,4 @@
-source startAndroidSetup.sh
+source ./startAndroidSetup.sh 
 sh startAzureDevOps.sh $1 $2 $3 $4
 cd ~ 
 cd agent
