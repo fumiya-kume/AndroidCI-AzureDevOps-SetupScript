@@ -13,7 +13,7 @@ sudo mkdir /usr/local/lib/android
 cd /usr/local/lib/android
 sudo wget  --output-document=android-sdk.zip https://dl.google.com/android/repository/sdk-tools-linux-4333796.zip
 sudo unzip android-sdk.zip 
-rm -rf android-sdk.zip 
+sudo rm -rf android-sdk.zip 
 cd tools/bin/
 
 sudo mkdir /root/.android
