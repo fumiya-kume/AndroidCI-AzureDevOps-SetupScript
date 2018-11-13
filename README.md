@@ -12,12 +12,11 @@
 
 ```sh
 cd ~
-rm -rf work
 mkdir work
 cd work
 git clone https://github.com/fumiya-kume/AndroidCI-AzureDevOps-SetupScript.git
-cd AndroidCI-AzureDevOps-SetupScript
-sh ./startAzureDevOpsService.sh {token} {organization {agent-pool} {agent-name}
+cd ~/work/AndroidCI-AzureDevOps-SetupScript/
+source ./init.sh {token} {organization {agent-pool} {agent-name}
 ```
 
 # how to uninstall 
